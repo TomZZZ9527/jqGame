@@ -1,0 +1,176 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head runat="server">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<title>反馈记录(编辑)</title>
+
+    <script type="text/javascript" src="../../../UCML_JS/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../UCML_JS/jquery.json.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../UCML_JS/App_Themes/Default/UCML_JS_Style.css" />
+    <script type="text/javascript" language="javascript" src="../../../UCML_JS/UCML_JS_All_H5.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../Model/Rule/jsrule.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../Model/Rule/initvalue.js"></script>
+	<script type="text/javascript" src="../../..//jquery/layer/layer.js"></script>
+
+    <script>
+        document.write("<script type='text/javascript' src='../../../Skin/skin.cfg.h5.js?v="+Math.random()+"'><\/script>");
+    </script>
+<link type="text/css" rel="stylesheet" href="../../../plugin/UCML.Plupload.css"/>
+<script type="text/javascript" src="../../../plugin/UCML.Plupload.js"></script>
+<script type="text/javascript" src="../../../plugin/plupload/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="../../../UCML_JS/Public.js"></script>
+	
+<script type="text/javascript" src="../../..//jquery/My97DatePicker/WdatePicker.js"></script>
+<!--反馈记录页面JS文件-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.comment.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	
+	
+	
+	
+    <script type="text/javascript" language="javascript" src="VC_Tran_TaskMXBtn_ED.js?version=0"></script>
+
+<style type=text/css>
+<style>
+	.container{
+		width: 1000px;
+	}
+	.commentbox{
+		width: 900px;
+		margin: 20px auto;
+	}
+	.mytextarea {
+	    width: 100%;
+	    overflow: auto;
+	    word-break: break-all;
+	    height: 100px;
+	    color: #000;
+	    font-size: 1em;
+	    resize: none;
+	}
+	.comment-list{
+		width: 900px;
+		margin: 20px auto;
+		clear: both;
+		padding-top: 20px;
+	}
+	.comment-list .comment-info{
+		position: relative;
+		margin-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+	.comment-list .comment-info header{
+		width: 10%;
+		position: absolute;
+	}
+	.comment-list .comment-info header img{
+		width: 100%;
+		border-radius: 50%;
+		padding: 5px;
+	}
+	.comment-list .comment-info .comment-right{
+		padding:5px 0px 5px 11%; 
+	}
+	.comment-list .comment-info .comment-right h3{
+		margin: 5px 0px;
+	}
+	.comment-list .comment-info .comment-right .comment-content-header{
+		height: 25px;
+	}
+	.comment-list .comment-info .comment-right .comment-content-header span,.comment-list .comment-info .comment-right .comment-content-footer span{
+		padding-right: 2em;
+		color: #aaa;
+	}
+	.comment-list .comment-info .comment-right .comment-content-header span,.comment-list .comment-info .comment-right .comment-content-footer span.reply-btn,.send,.reply-list-btn{
+		cursor: pointer;
+	}
+	.comment-list .comment-info .comment-right .reply-list {
+		border-left: 3px solid #ccc;
+		padding-left: 7px;
+	}
+	.comment-list .comment-info .comment-right .reply-list .reply{
+		border-bottom: 1px dashed #ccc;
+	}
+	.comment-list .comment-info .comment-right .reply-list .reply div span{
+		padding-left: 10px;
+	}
+	.comment-list .comment-info .comment-right .reply-list .reply p span{
+		padding-right: 2em;
+		color: #aaa;
+	}
+</style>
+</style>
+   	<script type="text/javascript" language="javascript">
+   	    var UCMLResourcePath="";
+   	    var UCMLLocalResourcePath="../../../";
+   	    var BPOName="VC_Tran_TaskMXBtn_ED";
+   	    var VC_Tran_TaskMX_ED = null;
+var FUseMultiLanguage = false;
+var IsHTMLPage = true;
+var BPOIsJQMPage = false;
+var BPOPageTheme ="";
+var BusinessData=[];
+BusinessData["BC_Tran_TaskMX"]=[];
+BusinessData["OIDData"]=[["BC_Tran_TaskMX",0,0,1]];
+BusinessData["FlowData"]=[];
+BusinessData["PropertyList"]=[];
+BusinessData["ResourceData"]=[];
+BusinessData["UCMLUserSystemInfo"]=[];
+
+var RecordCountInfo={};
+RecordCountInfo["BC_Tran_TaskMX"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:10};
+var ServerProperty={};
+   	    function Init()
+   	    {
+             BusinessObject.open();
+   	    }
+   	    function PrepareExColumn(){}
+   	</script>
+<script type="text/javascript" src="../../../Skin/include.h5.js"></script>
+	</head>
+	<body  onload= "Init()" class="UCML-BODY" leftMargin="0" topMargin="0">
+
+
+<Form id="Form1" method="post" runat="server">
+<div id="MainPanel" style="Z-INDEX: 100; left: 0px;top: 0px" class="UCML-MainPanel">
+<div id="TabStrip_Level_1" style="width: 100%; height: auto">
+<div id="Tab_VC_Tran_TaskMX_ED" title = "反馈记录" runat="server">
+<div id="VC_Tran_TaskMX_ED_Module" CssClass="UCML-Panel" Width="100%">
+<div id="VC_Tran_TaskMX_EDToolbar_Module" style="width:100%;">
+</div>
+<div id="VC_Tran_TaskMX_ED" style="width:100%;height:auto" title="反馈记录">
+    <div style="margin: auto; text-align: center;">
+      任务标题：
+      <input id="sonTaskName" style="width: 75%; height: 30px; font-size: 14px; margin-top: 30px; margin-bottom: -10px;" disabled="disabled" type="text"/>
+    </div>
+    <div class="container">
+      <div class="commentbox">
+        <textarea id="content" style="width: 100%;" placeholder="来说几句吧......" class="mytextarea" cols="80" rows="70">
+          来说几句吧......
+        </textarea>
+        <div id="comment" class="btn btn-info pull-right">
+          发表
+        </div>
+        <div id="Feedback" class="btn btn-info pull-right">
+          反馈意见
+        </div>
+      </div>
+      <div class="comment-list">
+      </div>
+    </div>
+  
+</div>
+</div>
+</div>
+</div>
+</div>
+</Form>
+<script type="text/javascript">
+</script>
+
+</body>
+</html>

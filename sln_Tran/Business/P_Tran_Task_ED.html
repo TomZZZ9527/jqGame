@@ -1,0 +1,365 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head runat="server">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<title>任务下达(编辑)</title>
+
+    <script type="text/javascript" src="../../../UCML_JS/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../UCML_JS/jquery.json.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../UCML_JS/App_Themes/Default/UCML_JS_Style.css" />
+    <script type="text/javascript" language="javascript" src="../../../UCML_JS/UCML_JS_All_H5.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../Model/Rule/jsrule.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../Model/Rule/initvalue.js"></script>
+	<script type="text/javascript" src="../../..//jquery/layer/layer.js"></script>
+
+    <script>
+        document.write("<script type='text/javascript' src='../../../Skin/skin.cfg.h5.js?v="+Math.random()+"'><\/script>");
+    </script>
+<link type="text/css" rel="stylesheet" href="../../../plugin/UCML.Plupload.css"/>
+<script type="text/javascript" src="../../../plugin/UCML.Plupload.js"></script>
+<script type="text/javascript" src="../../../plugin/plupload/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="../../../UCML_JS/Public.js"></script>
+	
+<script type="text/javascript" src="../../..//jquery/My97DatePicker/WdatePicker.js"></script>
+<!--反馈记录页面JS文件-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.comment.js" ></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	
+	
+	
+	
+	
+	
+    <script type="text/javascript" language="javascript" src="P_Tran_Task_ED.js?version=0"></script>
+
+
+<style type=text/css>
+<style>
+	.container{
+		width: 1000px;
+	}
+	.commentbox{
+		width: 900px;
+		margin: 0px auto;
+	}
+	.mytextarea {
+	    width: 100%;
+	    overflow: auto;
+	    word-break: break-all;
+	    height: 100px;
+	    color: #000;
+	    font-size: 1em;
+	    resize: none;
+	}
+	.comment-list{
+		width: 900px;
+		margin: 20px auto;
+		clear: both;
+		padding-top: 20px;
+	}
+	.comment-list .comment-info{
+		position: relative;
+		margin-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ccc;
+	}
+	.comment-list .comment-info header{
+		width: 10%;
+		position: absolute;
+	}
+	.comment-list .comment-info header img{
+		width: 100%;
+		border-radius: 50%;
+		padding: 5px;
+	}
+	.comment-list .comment-info .comment-right{
+		padding:5px 0px 5px 11%; 
+	}
+	.comment-list .comment-info .comment-right h3{
+		margin: 5px 0px;
+	}
+	.comment-list .comment-info .comment-right .comment-content-header{
+		height: 25px;
+	}
+	.comment-list .comment-info .comment-right .comment-content-header span,.comment-list .comment-info .comment-right .comment-content-footer span{
+		padding-right: 2em;
+		color: #aaa;
+	}
+	.comment-list .comment-info .comment-right .comment-content-header span,.comment-list .comment-info .comment-right .comment-content-footer span.reply-btn,.send,.reply-list-btn{
+		cursor: pointer;
+	}
+	.comment-list .comment-info .comment-right .reply-list {
+		border-left: 3px solid #ccc;
+		padding-left: 7px;
+	}
+	.comment-list .comment-info .comment-right .reply-list .reply{
+		border-bottom: 1px dashed #ccc;
+	}
+	.comment-list .comment-info .comment-right .reply-list .reply div span{
+		padding-left: 10px;
+	}
+	.comment-list .comment-info .comment-right .reply-list .reply p span{
+		padding-right: 2em;
+		color: #aaa;
+	}
+</style>
+</style>
+   	<script type="text/javascript" language="javascript">
+   	    var UCMLResourcePath="";
+   	    var UCMLLocalResourcePath="../../../";
+   	    var BPOName="P_Tran_Task_ED";
+   	    var VC_Tran_Task_ED = null;
+   	    var VC_Tran_TaskMX_ED = null;
+var FUseMultiLanguage = false;
+var IsHTMLPage = true;
+var BPOIsJQMPage = false;
+var BPOPageTheme ="";
+var BusinessData=[];
+BusinessData["BC_Tran_Task"]=[];
+BusinessData["BC_Pub_BusinessFile"]=[];
+BusinessData["BC_WF_FlowModelEx"]=[];
+BusinessData["BC_Cus_ConfigMX"]=[];
+BusinessData["BC_Cus_Config"]=[];
+BusinessData["BC_Tran_TaskMX"]=[];
+BusinessData["BC_Tran_TaskMXSon"]=[];
+BusinessData["OIDData"]=[["BC_Tran_Task",0,0,1],["BC_Pub_BusinessFile",0,0,1],["BC_WF_FlowModelEx",0,0,1],["BC_Cus_ConfigMX",0,0,1],["BC_Cus_Config",0,0,1],["BC_Tran_TaskMX",0,0,1],["BC_Tran_TaskMXSon",0,0,1]];
+BusinessData["FlowData"]=[];
+BusinessData["PropertyList"]=[];
+BusinessData["ResourceData"]=[];
+BusinessData["UCMLUserSystemInfo"]=[];
+
+var RecordCountInfo={};
+RecordCountInfo["BC_Tran_Task"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:10};
+RecordCountInfo["BC_Pub_BusinessFile"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:-1};
+RecordCountInfo["BC_WF_FlowModelEx"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:-1};
+RecordCountInfo["BC_Cus_ConfigMX"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:-1};
+RecordCountInfo["BC_Cus_Config"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:-1};
+RecordCountInfo["BC_Tran_TaskMX"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:10};
+RecordCountInfo["BC_Tran_TaskMXSon"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:10};
+var ServerProperty={};
+   	    function Init()
+   	    {
+             BusinessObject.open();
+   	    }
+   	    function PrepareExColumn(){}
+   	</script>
+<script type="text/javascript" src="../../../Skin/include.h5.js"></script>
+	</head>
+	<body  onload= "Init()" class="UCML-BODY" leftMargin="0" topMargin="0">
+
+
+<Form id="Form1" method="post" runat="server">
+<div id="MainPanel" style="Z-INDEX: 100; left: 0px;top: 0px" class="UCML-MainPanel">
+<div id="TabStrip_Level_1" style="width: 100%; height: auto">
+<div id="Tab_VC_Tran_Task_ED" title = "任务下达" runat="server">
+<div id="VC_Tran_Task_ED_Module" CssClass="UCML-Panel" Width="100%">
+<div id="VC_Tran_Task_EDToolbar_Module" style="width:100%;">
+</div>
+<div id="VC_Tran_Task_ED" style="width:100%;height:auto" title="任务下达">
+    <div id="VC_Tran_Task_EDEditPanel" data-formcolumns="2" style="height: auto;" class="container text-left u-label10em">
+      <div id="row1" class="row">
+        <div id="col1" class="col col-xs-12 col-sm-6 col-md-6 col-lg-12">
+          <div id="TaskNameLabel" class="u-label-control">
+            <label id="TaskNameLabelValue" class="u-label">
+              任务标题
+            </label>
+            <input id="TaskNameEdit" class="u-control form-control string" datafld="TaskName" ctype="UCML.TextBox"/>
+          </div>
+        </div>
+      </div>
+      <div id="row3" class="row">
+        <div id="col4" class="col col-xs-12 col-sm-6 col-md-6 col-lg-12">
+          <div id="ProjectNameLabel" class="u-label-control">
+            <label id="ProjectNameLabelValue" class="u-label">
+              项目名称
+            </label>
+            <input id="ProjectNameEdit" class="u-control form-control string" datafld="ProjectName" ctype="UCML.BCLinkBox"/>
+          </div>
+        </div>
+      </div>
+      <div id="row8" class="row">
+        <div id="col2" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="DutyPersonLabel" class="u-label-control">
+            <label id="DutyPersonLabelValue" class="u-label">
+              负责人
+            </label>
+            <input id="DutyPersonEdit" class="u-control form-control string" datafld="DutyPerson" ctype="UCML.BCLinkBox"/>
+          </div>
+        </div>
+        <div id="col12" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="CheckPersonLabel" class="u-label-control">
+            <label id="CheckPersonLabelValue" class="u-label">
+              审核人
+            </label>
+            <input id="CheckPersonEdit" class="u-control form-control string" datafld="CheckPerson" ctype="UCML.BCLinkBox"/>
+          </div>
+        </div>
+      </div>
+      <div id="row2" class="row">
+        <div id="col3" class="col col-xs-12 col-sm-6 col-md-6 col-lg-12">
+          <div id="ParticipantsLabel" class="u-label-control">
+            <label id="ParticipantsLabelValue" class="u-label">
+              参与人
+            </label>
+            <input id="ParticipantsEdit" class="u-control form-control string" datafld="Participants" ctype="UCML.BCLinkBox"/>
+          </div>
+        </div>
+      </div>
+      <div id="row4" class="row">
+        <div id="col7" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="StartLabel" class="u-label-control">
+            <label id="StartLabelValue" class="u-label">
+              计划开始
+            </label>
+            <input id="StartEdit" isshowtime="false" style="width: 300px;" class="u-control form-control string date" datafld="Start" datetype="datetime" ctype="UCML.TextBox" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',readOnly:true})"/>
+          </div>
+        </div>
+        <div id="col8" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="FinishLabel" class="u-label-control">
+            <label id="FinishLabelValue" class="u-label">
+              计划完成
+            </label>
+            <input id="FinishEdit" isshowtime="false" style="width: 300px;" class="u-control form-control string date" datafld="Finish" datetype="datetime" ctype="UCML.TextBox" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',readOnly:true,minDate:'#F{$dp.$D(\'StartEdit\')}',minTime:'#F{$dp.$D(\'StartEdit\')}'})"/>
+          </div>
+        </div>
+      </div>
+      <div id="row5" class="row">
+        <div id="col11" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="ActualStartLabel" class="u-label-control">
+            <label id="ActualStartLabelValue" class="u-label box">
+              实际开始
+            </label>
+            <input id="ActualStartEdit" isshowtime="false" style="width: 300px;" class="u-control form-control string date" datafld="ActualStart" datetype="datetime" ctype="UCML.TextBox" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',readOnly:true})"/>
+          </div>
+        </div>
+        <div id="col9" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="ActualFinishLabel" class="u-label-control">
+            <label id="ActualFinishLabelValue" class="u-label">
+              实际完成
+            </label>
+            <input id="ActualFinishEdit" isshowtime="false" style="width: 300px;" class="u-control form-control string date" datafld="ActualFinish" datetype="datetime" ctype="UCML.TextBox" type="text" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',readOnly:true,minDate:'#F{$dp.$D(\'ActualStartEdit\')}',minTime:'#F{$dp.$D(\'ActualStartEdit\')}'})"/>
+          </div>
+        </div>
+      </div>
+      <div id="row6" class="row">
+        <div id="col10" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="ImportantLabel" class="u-label-control">
+            <label id="ImportantLabelValue" class="u-label ">
+              重要程度
+            </label>
+            <select id="ImportantEdit" class="u-control form-control" datafrom="CodeTable" datafld="Important" codetable="Tran_TaskImportant" iscodetable="true" ctype="UCML.DropDownList">
+            </select>
+          </div>
+        </div>
+        <div id="col14" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="BusinessStateLabel" class="u-label-control">
+            <label id="BusinessStateLabelValue" class="u-label ">
+              任务状态
+            </label>
+            <select id="BusinessStateEdit" class="u-control form-control" datafrom="CodeTable" datafld="BusinessState" codetable="Tran_TaskState" iscodetable="true" ctype="UCML.DropDownList">
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="row7" class="row">
+        <div id="col6" class="col col-xs-12 col-sm-6 col-md-6 col-lg-12">
+          <div id="standardLabel" class="u-label-control">
+            <label id="standardLabelValue" class="u-label">
+              完成标准
+            </label>
+          </div>
+        </div>
+        <div id="col13" class="col col-xs-12 col-sm-6 col-md-6 col-lg-12">
+          <div id="RemarkLabel" class="u-label-control">
+            <label id="RemarkLabelValue" class="u-label">
+              任务描述
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</div>
+</div>
+</div>
+<div id="Tab_VC_Tran_TaskMX_ED" title = "反馈记录" runat="server">
+<div id="VC_Tran_TaskMX_ED_Module" CssClass="UCML-Panel" Width="100%">
+<div id="VC_Tran_TaskMX_EDToolbar_Module" style="width:100%;">
+</div>
+<div id="VC_Tran_TaskMX_ED" style="width:100%;height:auto" title="反馈记录">
+    <div id="VC_Tran_TaskMX_EDEditPanel" data-formcolumns="2" style="height: auto;" class="container text-left u-label12em">
+      <div id="row1" class="row">
+        <div id="col10" class="col col-xs-12 col-sm-6 col-md-6 col-lg-12">
+          <div id="TaskNameLabel" class="u-label-control">
+            <label id="TaskNameLabelValue" class="u-label">
+              任务标题
+            </label>
+            <input id="TaskNameEdit1" readonly="readOnly" class="u-control form-control string"/>
+          </div>
+        </div>
+        <div id="col1" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="TaskMX_TypeLabel" class="u-label-control">
+            <label id="TaskMX_TypeLabelValue" class="u-label ">
+              类别
+            </label>
+            <select id="TaskMX_TypeEdit" class="u-control form-control" datafrom="CodeTable" datafld="TaskMX_Type" codetable="Tran_TaskFeedbackCategory" iscodetable="true" ctype="UCML.DropDownList">
+            </select>
+          </div>
+        </div>
+        <div id="col2" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="RemarkLabel" class="u-label-control">
+            <label id="RemarkLabelValue" class="u-label">
+              描述
+            </label>
+            <input id="RemarkEdit" class="u-control form-control string" datafld="Remark" ctype="UCML.TextBox"/>
+          </div>
+        </div>
+      </div>
+      <div id="row2" class="row">
+        <div id="col3" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="FinishStateLabel" class="u-label-control">
+            <label id="FinishStateLabelValue" class="u-label ">
+              完成状态
+            </label>
+            <select id="FinishStateEdit" class="u-control form-control" datafrom="CodeTable" datafld="FinishState" codetable="Tran_TaskFinishState" iscodetable="true" ctype="UCML.DropDownList">
+            </select>
+          </div>
+        </div>
+        <div id="col4" class="col col-xs-12 col-sm-6 col-md-6 col-lg-6">
+          <div id="ActualFinishLabel" class="u-label-control">
+            <label id="ActualFinishLabelValue" class="u-label">
+              实际完成时间
+            </label>
+            <input id="ActualFinishEdit" isshowtime="false" class="u-control form-control string date" datafld="ActualFinish" datetype="datetime" ctype="UCML.DateTimeBox"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="commentbox">
+        <textarea id="content" style="width: 110%;" placeholder="来说几句吧......" class="mytextarea"></textarea>
+        <div id="comment" class="btn btn-info pull-right">
+          发表
+        </div>
+        <div id="Feedback" class="btn btn-info pull-right">
+          反馈意见
+        </div>
+      </div>
+      <div class="comment-list">
+      </div>
+    </div>
+  
+</div>
+</div>
+</div>
+</div>
+</div>
+</Form>
+<script type="text/javascript">
+</script>
+
+</body>
+</html>
