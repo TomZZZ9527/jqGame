@@ -1,0 +1,131 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head runat="server">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="format-detection" content="telephone=no" />
+		<title>项目模版</title>
+
+    <script type="text/javascript" src="../../../UCML_JS/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../../UCML_JS/jquery.json.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../UCML_JS/App_Themes/Default/UCML_JS_Style.css" />
+    <script type="text/javascript" language="javascript" src="../../../UCML_JS/UCML_JS_All_H5.js"></script>
+    <script type="text/javascript" language="javascript" src="../../../Model/Rule/jsrule.js"></script>
+	<script type="text/javascript" language="javascript" src="../../../Model/Rule/initvalue.js"></script>
+	<script type="text/javascript" src="../../..//jquery/layer/layer.js"></script>
+
+    <script>
+        document.write("<script type='text/javascript' src='../../../Skin/skin.cfg.h5.js?v="+Math.random()+"'><\/script>");
+    </script>
+<link rel="stylesheet" type="text/css"  href="../../..//jquery/QueryStyle/css/screen.css" />
+<link rel="stylesheet" type="text/css"  href="../../..//jquery/QueryStyle/css/stages.css" />
+<script type="text/javascript"  src="../../..//jquery/QueryStyle/js/vue.min.js" charset="gb2312"></script>
+
+    <script type="text/javascript" language="javascript" src="P_Plan_Template_QY.js?version=0"></script>
+
+   	<script type="text/javascript" language="javascript">
+   	    var UCMLResourcePath="";
+   	    var UCMLLocalResourcePath="../../../";
+   	    var BPOName="P_Plan_Template_QY";
+   	    var VC_Plan_Template_QY = null;
+var FUseMultiLanguage = false;
+var IsHTMLPage = true;
+var BPOIsJQMPage = false;
+var BPOPageTheme ="";
+var BusinessData=[];
+BusinessData["BC_Plan_Template"]=[];
+BusinessData["BC_Pub_ProjectType"]=[];
+BusinessData["OIDData"]=[["BC_Plan_Template",0,0,1],["BC_Pub_ProjectType",0,0,1]];
+BusinessData["FlowData"]=[];
+BusinessData["PropertyList"]=[];
+BusinessData["ResourceData"]=[];
+BusinessData["UCMLUserSystemInfo"]=[];
+
+var RecordCountInfo={};
+RecordCountInfo["BC_Plan_Template"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:-1};
+RecordCountInfo["BC_Pub_ProjectType"]={StartPos:0,ReadCount:0,RecordCount:0,PageCount:-1};
+var ServerProperty={};
+   	    function Init()
+   	    {
+             BusinessObject.open();
+   	    }
+   	    function PrepareExColumn(){}
+   	</script>
+<script type="text/javascript" src="../../../Skin/include.h5.js"></script>
+	</head>
+	<body  onload= "Init()" class="UCML-BODY" leftMargin="0" topMargin="0">
+
+
+<Form id="Form1" method="post" runat="server">
+<div id="MainPanel" style="Z-INDEX: 100; left: 0px;top: 0px" class="UCML-MainPanel">
+<div id="VC_Plan_Template_QY_Module" CssClass="UCML-Panel" Width="100%">
+<div id="VC_Plan_Template_QYToolbar_Module" style="width:100%;">
+</div>
+<div id="VC_Plan_Template_QY" style="width:100%;height:100%" title="项目模版">
+    <div id="VC_Plan_Template_QYEditPanel" style="height: auto; margin-top: 20px;" class="container text-left u-label6em">
+      <div id="row1" class="row">
+        <div id="col1" class="col col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <input id="utextbox1" style="width: 100%;" placeholder="标签/项目类型/模版名称等模糊检索" class="u-control form-control" value="" ctype="UCML.TextBox" type="text"/>
+        </div>
+        <div id="col2" class="col col-xs-12 col-sm-4 col-md-4 col-lg-3">
+          <input id="utreebox1" srcbcname="BC_Pub_ProjectType" parentnodefield="ParentOID" nodenamefield="TypeName" datatextfield="TypeName" panelheight="400" showcheckbox="false" datavaluefield="Pub_ProjectTypeOID" checkboxmode="0" class="u-control form-control input-arrow" datafld="TypeOID" ctype="UCML.ComboxTree" panelwidth="400" expanddepth="1" tartextdatafield="TypeName"/>
+        </div>
+        <div id="col3" class="col col-xs-12 col-sm-6 col-md-6 col-lg-4">
+          <input id="Query" class="u-label" value="搜索" type="button"/>
+          <input id="Clears" class="u-label" value="清空" type="button"/>
+          <input id="Add" class="u-label" value="新增" type="button"/>
+        </div>
+      </div>
+      <div id="row1" class="row">
+        <div id="ulabel1" style="margin-top: 10px;" class="u-control ulabel" ctype="UCML.Label">
+        </div>
+      </div>
+      <div id="bootstraprow3" class="row">
+        <div :id="list.OID" v-for="(list,index) in lists" v-bind:key="list.OID" v-cloak="">
+          <div style="width: 360px; height: 176px;" class="stages">
+            <div class="stages_left">
+              <div :id="imgID(list.OID)" class="img">
+                <img style="width: 100%; height: 113px; max-height: 129px;" class="img-rounded" alt="" :src="list.img"/>
+              </div>
+              <a style="color: rgb(0, 123, 255); font-size: 13px;" class="skip" :href="fn_EditData(list.OID,'Edit')">
+                编辑
+              </a>
+              <a style="color: rgb(0, 123, 255); font-size: 13px;" class="skip" :href="fn_DelData(list.OID)">
+                删除
+              </a>
+              <a style="color: rgb(0, 123, 255); font-size: 13px;" class="skip" :href="fn_EditData(list.OID,'See')">
+                查看
+              </a>
+            </div>
+            <div class="stages_right">
+              <div style="font-size: 14.4px;" class="title" :title="list.Name">
+                {{list.Name}}
+              </div>
+              <div style="font-size: 10px; margin-top: 15px;" class="text1" :title="list.Version">
+                版本：{{list.Version}}
+              </div>
+              <div style="font-size: 10px; margin-top: 6px;" class="text1">
+                创建人：{{list.PersonName}}
+              </div>
+              <div style="font-size: 10px; margin-top: 6px;" class="text1" :title="list.TheLabel">
+                标签：{{list.TheLabel}}
+              </div>
+              <div style="font-size: 10px; margin-top: 6px;" class="text1" :title="list.ProjectType">
+                项目类型：{{list.ProjectType}}
+              </div>
+            </div>
+            <div class="clear">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</div>
+</div>
+</div>
+</Form>
+<script type="text/javascript">
+</script>
+
+</body>
+</html>
